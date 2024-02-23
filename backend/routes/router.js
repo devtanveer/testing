@@ -4,6 +4,11 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const schemas = require('../models/schemas');
 
+router.get('/', async (req, res) =>
+  {
+    res.json("I Am Working");
+  });
+
 
 router.post('/contact/:a', async (req, res) => {
     const { name, email, phone, address, website, message } = req.body;
